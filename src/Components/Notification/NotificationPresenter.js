@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Flex, { FlexItem } from "styled-flex-component";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
+import Store from "store";
 
 const Notification = styled.div`
   background-color: white;
@@ -55,12 +56,18 @@ const Button = styled.button`
 const NotificationPresenter = ({ id, text, seen }) => (
   <Notification seen={seen}>
     <Flex alignCenter justifyBetween>
-      <Title>{text}</Title>
+      <Title>
+        <Store.Consumer>{store => store.message}</Store.Consumer>
+      </Title>
       <FlexItem>
         <Fragment>
-          <Button success seen={seen} onClick={() => {}}>
-            <FontAwesomeIcon icon={faCheck} />
-          </Button>
+          <Store.Consumer>
+            {store => (
+              <Button success seen={seen} onClick={store.changeMessage}>
+                <FontAwesomeIcon icon={faCheck} />
+              </Button>
+            )}
+          </Store.Consumer>
           <Button danger seen={seen} onClick={() => {}}>
             <FontAwesomeIcon icon={faTimes} />
           </Button>
