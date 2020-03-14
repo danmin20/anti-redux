@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import App from "./Components/App";
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
-import "./typography";
 
 const Styles = createGlobalStyle`
     ${reset};

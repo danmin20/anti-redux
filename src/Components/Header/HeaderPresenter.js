@@ -14,6 +14,13 @@ const Header = styled.header`
 
 const Title = styled.h1`
   font-weight: bold;
+  font-family: 'Lobster', cursive;
+  margin-left: 100px;
+  font-size: 50px;
+`;
+
+const Red = styled.span`
+  color: #e74c3c;
 `;
 
 const HeaderIcon = styled.span`
@@ -63,7 +70,7 @@ const HeaderPresenter = () => (
   <Header>
     <Flex full justifyBetween alignCenter>
       <FlexItem>
-        <Title>Anti Redux</Title>
+        <Title><Red>Anti</Red> Redux</Title>
       </FlexItem>
       <FlexItem>
         <Flex>

@@ -14,8 +14,7 @@
     "react-scripts": "3.4.0",
     "styled-components": "^5.0.1",
     "styled-flex-component": "^3.0.0",
-    "styled-reset": "^4.1.1",
-    "typography": "^0.16.19"
+    "styled-reset": "^4.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
