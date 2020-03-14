@@ -5,11 +5,17 @@ import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 import "./typography";
 
-createGlobalStyle`
+const Styles = createGlobalStyle`
     ${reset};
     body{
         background-color: #ecf0f1;
     }
 `;
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <>
+    <Styles />
+    <App />
+  </>,
+  document.getElementById("root")
+);
